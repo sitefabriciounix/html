@@ -4,13 +4,11 @@ require_once("vendor/autoload.php");
 
 $app = new \Slim\Slim();
 
-use \Hcode\Page;
-
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$page = new Page();
+	$page = new Hcode\Page();
 
 	$page->setTpl("index");
 
